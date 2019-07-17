@@ -45,7 +45,6 @@ public class RestaurantsActivity extends AppCompatActivity {
                 String restaurant = ((TextView)view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this,restaurant,Toast.LENGTH_LONG).show();
 
-                Log.v(TAG, "In the onItemClickListener!");
             }
         });
 
@@ -57,7 +56,6 @@ public class RestaurantsActivity extends AppCompatActivity {
         String view = "Here are all the restaurants near: " + location;
         mLocationTextView.setText(view);
 
-        Log.d(TAG, "In the onCreate method!");
 
     }
 }
