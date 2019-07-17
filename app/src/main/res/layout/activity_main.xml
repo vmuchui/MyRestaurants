@@ -23,7 +23,7 @@
         android:autoSizeMaxTextSize="60sp"
         android:text="My Restaurants"
         android:textColor="@color/colorAccent"
-        android:textSize="42sp"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <EditText
