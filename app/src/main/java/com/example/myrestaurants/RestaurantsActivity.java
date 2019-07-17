@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,6 +18,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RestaurantsActivity extends AppCompatActivity {
+
+    public static final String TAG = RestaurantsActivity.class.getSimpleName();
     @BindView
    (R.id.locationTextView) TextView mLocationTextView;
 
@@ -41,6 +44,8 @@ public class RestaurantsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String restaurant = ((TextView)view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this,restaurant,Toast.LENGTH_LONG).show();
+
+                Log.v(TAG, "In the onItemClickListener!");
             }
         });
 
@@ -51,5 +56,8 @@ public class RestaurantsActivity extends AppCompatActivity {
         String location = intent.getStringExtra("location");
         String view = "Here are all the restaurants near: " + location;
         mLocationTextView.setText(view);
+
+        Log.d(TAG, "In the onCreate method!");
+
     }
 }
